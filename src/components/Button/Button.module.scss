@@ -1,0 +1,46 @@
+@import "../../scss/variables";
+
+.Button {
+  border: none;
+  outline: none;
+  transition: all .4s;
+}
+
+.ButtonNormal {
+  @extend .Button;
+  background-color: $clr-black;
+  color: $clr-white;
+  border-radius: .5rem;
+  border: .2rem solid $clr-black;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  padding: 1rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $clr-white;
+    color: $clr-black;
+  }
+}
+
+.ButtonCollapse {
+  @extend .Button;
+  background-color: transparent;
+  // color: $clr-primary-5;
+  cursor: pointer;
+  transform: rotate(0deg);
+
+  & > * {
+    display: block;
+    background-color: $clr-primary-5;
+    width: 3rem;
+    height: .6rem;
+    border-radius: .5rem;
+    box-shadow: $light-shadow;
+    margin: .5rem 0;
+  }
+
+  &:hover {
+    transform: rotate(90deg);
+  }
+}
