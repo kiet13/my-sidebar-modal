@@ -1,4 +1,5 @@
 @import "../../scss/variables";
+@import "../../scss/mixins";
 
 .Sidebar {
   position: fixed;
@@ -17,6 +18,11 @@
   opacity: 0;
   transform: translateX(-100%);
   transition: all .4s;
+
+  @include respond(phone) {
+    font-size: 2.4rem;
+    width: 100%;
+  }
 }
 
 .Show {
